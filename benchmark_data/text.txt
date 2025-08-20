@@ -1,0 +1,15 @@
+dataset/suo_sango/suo_sango009_107.wav|0|彼は「これに限って、人様に怨みを受ける様なものではございません」といって泣くのだ
+dataset/suo_sango/suo_sango009_108.wav|0|それに、彼が色々調べた結果、物とりの仕業でないことも確められた
+dataset/suo_sango/suo_sango009_109.wav|0|そこで、主人の経歴、細君の身許其他様々の取調べがあったけれど、それらは別段疑うべき点もなく、この話の筋に大して関係もないので略することにする
+dataset/suo_sango/suo_sango009_110.wav|0|最後に死人の身体にある多くの生傷について刑事の質問があった
+dataset/suo_sango/suo_sango009_111.wav|0|主人は非常に躊躇して居ったが、やっと自分がつけたのだと答えた
+dataset/suo_sango/suo_sango009_112.wav|0|ところが、その理由については、くどく訊ねられたにも拘らず、はっきり答えることはできなかった
+dataset/suo_sango/suo_sango009_113.wav|0|併し、彼はその夜ずっと夜店を出していたことが分っているのだから、たとえそれが虐待の傷痕だったとしても、殺害の疑いはかからぬ筈だ
+dataset/suo_sango/suo_sango009_114.wav|0|刑事もそう思ったのか、深くは穿鑿しなかった
+dataset/suo_sango/suo_sango009_115.wav|0|そうして、その夜の取調べは一先ず終った
+dataset/suo_sango/suo_sango009_116.wav|0|私達は住所姓名などを書留められ、明智は指紋をとられて、帰途についたのは、もう一時を過ぎていた
+dataset/suo_sango/suo_sango009_117.wav|0|もし警察の捜索にぬかり、手抜かりがなく、又証人達も嘘を云わなかったとすれば、これは実に不可解な事件であった
+dataset/suo_sango/suo_sango009_118.wav|0|しかし、後で分った所によると、翌日から引続いて行われた、小林刑事のあらゆる取調べも何の甲斐もなくて、事件は発生の当夜のまま少しだって発展しなかったのだ
+dataset/suo_sango/suo_sango009_119.wav|0|証人達は凡て信頼するに足る人々だった
+dataset/suo_sango/suo_sango009_120.wav|0|十一軒の長屋の住人にも疑うべき所はなかった
+dataset/suo_sango/suo_sango010_001.wav|0|被害者の国許もとりしおら、取調べられたけれど、これ亦、何の変った事もない

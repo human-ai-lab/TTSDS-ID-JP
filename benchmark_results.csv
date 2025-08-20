@@ -1,0 +1,12 @@
+benchmark_name,benchmark_category,dataset,score,time_taken,noise_dataset,reference_dataset
+Hubert,GENERIC,generated,91.27357587777941,415.48385524749756,noise_uniform_distribution,reference
+Wav2Vec2,GENERIC,generated,89.94500490223297,413.6856646537781,noise_all_zeros,reference
+WavLM,GENERIC,generated,95.4751497642026,418.4089033603668,noise_uniform_distribution,reference
+Wav2Vec2 Activations,INTELLIGIBILITY,generated,93.95136226754069,410.0574815273285,noise_uniform_distribution,reference
+Whisper Activations,INTELLIGIBILITY,generated,61.208111781890054,2272.838025331497,noise_normal_distribution,reference
+Allosaurus SR,PROSODY,generated,,,,
+Hubert Token SR,PROSODY,generated,37.48815661439354,411.64629650115967,noise_uniform_distribution,reference
+MPM,PROSODY,generated,94.8018861238469,132.133944272995,noise_uniform_distribution,reference
+Pitch,PROSODY,generated,85.17267050128127,32.48231387138367,noise_all_ones,reference
+DVector,SPEAKER,generated,,,,
+WeSpeaker,SPEAKER,generated,,,,

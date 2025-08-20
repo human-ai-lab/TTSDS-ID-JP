@@ -21,6 +21,7 @@ def download_models():
             "suo_sango_otona/suo_sango_otona_e100.safetensors",
         ],
     }
+    Path("model_assets").mkdir(exist_ok=True)
     for repo_id, files in model_files.items():
         for file in files:
             if not Path(f"model_assets/{file}").exists():

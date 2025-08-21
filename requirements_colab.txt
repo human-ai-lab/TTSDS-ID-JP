@@ -3,7 +3,6 @@ cn2an
 dotenv
 g2p_en
 jieba
-localtunnel
 loguru
 num2words
 numpy<2
@@ -11,7 +10,6 @@ psutil
 onnxruntime
 pyannote.audio>=3.1.0
 pydantic
-pyloudnorm
 pyopenjtalk-dict
 pypinyin
 pyworld-prebuilt

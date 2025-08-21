@@ -15,7 +15,7 @@ def download_bert_models():
 
 def download_models():
     model_files  = {
-        "MichaelJP/TTSDS-ID-JP": [
+        "MichaelJP/TTSDS-ID-JP-SUO-SANGO": [
             "suo_sango_otona/config.json",
             "suo_sango_otona/style_vectors.npy",
             "suo_sango_otona/suo_sango_otona_e100.safetensors",

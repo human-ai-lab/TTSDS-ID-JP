@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 import os
 import time
 from translate import translate_text_to_japanese
@@ -38,11 +37,6 @@ def generate_sound(text):
         loading_placeholder.write(f"⏳ Processing... ({waiting_time}s)")
 
 st.title("Indonesian Folk Story Storytelling in Japanese Language with Text-to-speech (TTS)")
-
-benchmark_datas = pd.read_csv('benchmark_results.csv')
-benchmark_datas = benchmark_datas.dropna(axis=0)
-st.write("Benchmark Result:")
-st.dataframe(benchmark_datas[['benchmark_name', 'benchmark_category', 'score']])
 
 story_choice = st.selectbox(
     'Story Choices:',

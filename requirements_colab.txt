@@ -14,7 +14,6 @@ pyopenjtalk-dict
 pypinyin
 pyworld-prebuilt
 requests
-streamlit
 torch
 torchaudio
 torchvision

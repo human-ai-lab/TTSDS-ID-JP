@@ -26,6 +26,9 @@
   </ol>
 </details>
 
+<!-- GOOGLE COLAB -->
+[Open Notebook on Google Drive](https://colab.research.google.com/drive/1xPZeCKeJKevm_pEavow_54CnER_DIqsK?usp=sharing)
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 

@@ -30,6 +30,7 @@
 [Open Notebook on Google Drive](https://colab.research.google.com/drive/1xPZeCKeJKevm_pEavow_54CnER_DIqsK?usp=sharing)
 
 <!-- ABOUT THE PROJECT -->
+<a id="about-the-project"></a>
 ## About The Project
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.

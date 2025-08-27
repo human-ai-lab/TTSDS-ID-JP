@@ -5,7 +5,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#ttdsdidjp">About The Project</a>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -28,7 +28,8 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+<a id="ttdsdidjp"></a>
+## About TTSDS-ID-JP
 
 This **Indonesian Folklore Storytelling in Japanese with Text-to-Speech** project proposes an integrated framework for cross-lingual folklore preservation by automating the conversion of Indonesian folk narratives into Japanese speech. The system combines machine translation and text-to-speech (TTS) synthesis: Google Translate converts Indonesian text into Japanese, and a fine-tuned Style-Bert-VITS2 model generates high-quality, expressive speech. The models in this project were fine-tuned on a dataset sourced from the YouTube channel of the virtual YouTuber (VTuber) [Suo Sango](https://www.youtube.com/@SuoSango). 
 
@@ -68,7 +69,9 @@ If you already have a prepared custom dataset, you can proceed to the [Fine-tuni
 <a id="pcd"></a>
 ### Preparing Custom Dataset
 
-* npm
+The custom dataset preparation process begins by sourcing audio from a YouTube video, downloaded as a `*.wav` file using the `yt-dlp` library. To ensure high-quality results, it is crucial to select videos focused on clear storytelling without background music or sound effects. The resulting audio file is then segmented based on manually annotated timestamps created in Audacity, using the `pydub` library to accurately split the audio at precise phrase boundaries. For the text transcript, Japanese novels can be sourced from [Aozora Bunko](https://www.aozora.gr.jp/); this text is subsequently split into sentences using standard Python string operations based on punctuation. The following sections detail the code and methodology for each step in this workflow.
+
+1. npm
   ```sh
   npm install npm@latest -g
   ```
@@ -117,6 +120,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## References
 + [suo-sango/Storytelling-Voice](https://youtube.com/@suosango?si=0GXrUXLqZsP7NgOT)
 + [litagin02/Style-Bert-VITS2](https://github.com/litagin02/Style-Bert-VITS2)
++ [yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp)
++ [jiaaro/pydub](https://github.com/jiaaro/pydub)
++ [Aozora Bunko](https://www.aozora.gr.jp/)
 + [ttsds/TTSDS-benchmark](https://github.com/ttsds/ttsds)
 + [othneildrew/README-Template](https://github.com/othneildrew/Best-README-Template)
 

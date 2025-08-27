@@ -38,11 +38,13 @@ This work is intended for use within the private research community of the Human
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+This guide outlines the process for fine-tuning a new model with your own custom dataset using the [Style-Bert-VITS2](https://github.com/litagin02/Style-Bert-VITS2) model. It also covers how to perform inference (generate speech) using our provided model, which was fine-tuned on data from [Suo Sango](https://www.youtube.com/@SuoSango).
 
-### Fine-tuning Custom Dataset
+*   **To fine-tune a model with your own dataset**, follow the steps in the "Fine-Tuning a Custom Dataset" section.
+*   **To only generate speech using our pre-fine-tuned model**, jump directly to the [Inference using Fine-tuned Model](#iuftm) section.
+
 <a id="ftcd"></a>
+### Fine-tuning a Custom Dataset
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
@@ -50,8 +52,8 @@ This is an example of how to list things you need to use the software and how to
   npm install npm@latest -g
   ```
 
-### Inference using Fine-tuned Model
 <a id="iuftm"></a>
+### Inference using Fine-tuned Model
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 

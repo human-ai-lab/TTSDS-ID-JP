@@ -30,7 +30,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project **Indonesian Folklore Storytelling in Japanese using Text-to-Speech Technology** proposes an integrated framework for cross-lingual folklore preservation by automating the conversion of Indonesian folk narratives into Japanese speech. The system combines machine translation and text-to-speech (TTS) synthesis: Google Translate converts Indonesian text into Japanese, and a fine-tuned Style-Bert-VITS2 model generates high-quality, expressive speech. The models in this project were fine-tuned on a dataset sourced from the YouTube channel of the virtual YouTuber (VTuber) [Suo Sango](https://www.youtube.com/@SuoSango). 
+This **Indonesian Folklore Storytelling in Japanese with Text-to-Speech** project proposes an integrated framework for cross-lingual folklore preservation by automating the conversion of Indonesian folk narratives into Japanese speech. The system combines machine translation and text-to-speech (TTS) synthesis: Google Translate converts Indonesian text into Japanese, and a fine-tuned Style-Bert-VITS2 model generates high-quality, expressive speech. The models in this project were fine-tuned on a dataset sourced from the YouTube channel of the virtual YouTuber (VTuber) [Suo Sango](https://www.youtube.com/@SuoSango). 
 
 This work is intended for use within the private research community of the Human-AI Interaction Laboratory at Nara Institute of Science and Technology University (NAIST).
 
@@ -64,6 +64,7 @@ To provide a reference for expected fine-tuning times and Google Drive storage u
     *   **Important:** While only the latest checkpoint is kept in the target folder, previous checkpoints are moved to your Google Drive's trash. **You must manually empty your trash** to free up this storage space during long training runs.
 
 If you already have a prepared custom dataset, you can proceed to the [Fine-tuning Process](#ftp).
+
 <a id="pcd"></a>
 ### Preparing Custom Dataset
 

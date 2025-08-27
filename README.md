@@ -47,7 +47,7 @@ This guide outlines the process for fine-tuning a new model with your own custom
 *   **To only generate speech using our pre-fine-tuned model**, jump directly to the [Inference using Fine-tuned Model](#iuftm) section.
 
 <a id="ftcd"></a>
-### Fine-tuning a Custom Dataset
+## Fine-tuning a Custom Dataset
 
 Fine-tuning the model is computationally intensive. It is highly recommended to use a machine with a GPU possessing **more than 16 GB of VRAM**.
 
@@ -65,7 +65,7 @@ To provide a reference for expected fine-tuning times and Google Drive storage u
 
 If you already have a prepared custom dataset, you can proceed to the [Fine-tuning Process](#ftp).
 <a id="pcd"></a>
-#### Preparing Custom Dataset
+### Preparing Custom Dataset
 
 * npm
   ```sh
@@ -73,11 +73,11 @@ If you already have a prepared custom dataset, you can proceed to the [Fine-tuni
   ```
 
 <a id="ftp"></a>
-#### Fine-tuning Process
+### Fine-tuning Process
 [Open Notebook on Google Drive](https://colab.research.google.com/drive/1xPZeCKeJKevm_pEavow_54CnER_DIqsK?usp=sharing)
 
 <a id="iuftm"></a>
-### Inference using Fine-tuned Model
+## Inference using Fine-tuned Model
 [Open Notebook on Google Drive](https://colab.research.google.com/drive/1XUIlCzJQfIi2hFJwTtE1VUr67ax4qJYX?usp=sharing)
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._

@@ -82,6 +82,66 @@ The following sections detail the code and methodology for each step in this wor
   yt-dlp --extract-audio --audio-format wav "youtube-link"
   ```
 
+2. Split the text transcript
+  ```sh
+  filenames = ["file_name"] ### CHANGE HERE ###
+  index = 0
+  size = 120
+  
+  for filename in filenames:
+      title = 1
+      with open(f"./path/to/{filename}.txt", "r", encoding="utf-8") as read_file: ### CHANGE HERE ###
+          with open(f"./path/to/model_name_{filename}.txt", "w", encoding="utf-8") as write_file: ### CHANGE HERE ###
+              buffer = ''
+              for row in read_file:
+                  row = row.strip()
+                  row = row.split("。")
+                  for part in row:
+                      text = buffer + part
+                      if len(text) >= 10 or title:
+                          write_file.write(f"dataset/model_name/model_name{index//size+1:03d}_{index%size+1:03d}.wav|0|{text}\n") ### CHANGE HERE ###
+                          index += 1
+                          buffer = ''
+                          title = 0
+                      elif text != '':
+                          buffer = text + '。'                            
+  ```
+
+3. Split the audio file (each audio file has a different optimal silence threshold; always experiment to find the right `silence_threshold` value.)
+  ```sh
+  pip install pydub
+  ```
+  ```sh
+  from pydub import AudioSegment
+  from pydub.silence import detect_leading_silence
+  
+  audio = AudioSegment.from_file("./path/to/model_name_filename.wav", format="wav") ### CHANGE HERE ###
+  size = 120
+  
+  with open("./path/to/corresponding_filename_timestamp_text.txt", "r", encoding="utf-8") as read_file: ### CHANGE HERE ###
+      timestamps_in_seconds = [float(timestamp.split('\t')[0]) for timestamp in read_file]
+  timestamps_ms = [t * 1000 for t in timestamps_in_seconds]
+  start_ms, timestamps_ms = timestamps_ms[0], timestamps_ms[1:]
+  print(f"Timestamps size: {len(timestamps_ms)}")
+  
+  for i, end_ms in enumerate(timestamps_ms):
+      print("Exporting chunk{0}.wav.".format(i+1))
+      segment = audio[start_ms:end_ms]
+      leading_silence = detect_leading_silence(
+          segment, 
+          silence_threshold=-80, ### CHANGE HERE ###
+          chunk_size=10
+      )
+      if leading_silence > 0:
+          print(f"Chunk {i+1}: Trimmed {leading_silence}ms of leading silence")
+          segment = segment[leading_silence:]
+      
+      silence_chunk = AudioSegment.silent(duration=500)
+      audio_chunk = silence_chunk + segment + silence_chunk
+      audio_chunk.export(f"./path/to/model_name{i//size+1:03d}_{i%size+1:03d}.wav", format="wav") ### CHANGE HERE ###
+      start_ms = end_ms
+  ```
+
 <a id="ftp"></a>
 ### Fine-tuning Process
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xPZeCKeJKevm_pEavow_54CnER_DIqsK?usp=sharing)

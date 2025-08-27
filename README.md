@@ -27,9 +27,6 @@
   </ol>
 </details>
 
-<!-- GOOGLE COLAB -->
-[Open Notebook on Google Drive](https://colab.research.google.com/drive/1xPZeCKeJKevm_pEavow_54CnER_DIqsK?usp=sharing)
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -73,9 +70,11 @@ If you already have a prepared custom dataset, you can proceed to the [Fine-tuni
 
 <a id="ftp"></a>
 #### Fine-tuning Process
+[Open Notebook on Google Drive](https://colab.research.google.com/drive/1xPZeCKeJKevm_pEavow_54CnER_DIqsK?usp=sharing)
 
 <a id="iuftm"></a>
 ### Inference using Fine-tuned Model
+[Open Notebook on Google Drive](https://colab.research.google.com/drive/1XUIlCzJQfIi2hFJwTtE1VUr67ax4qJYX?usp=sharing)
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 

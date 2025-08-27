@@ -75,6 +75,7 @@ If you already have a prepared custom dataset, you can proceed to the [Fine-tuni
 <a id="ftp"></a>
 ### Fine-tuning Process
 [Open Notebook on Google Drive](https://colab.research.google.com/drive/1xPZeCKeJKevm_pEavow_54CnER_DIqsK?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xPZeCKeJKevm_pEavow_54CnER_DIqsK?usp=sharing)
 
 <a id="iuftm"></a>
 ## Inference using Fine-tuned Model

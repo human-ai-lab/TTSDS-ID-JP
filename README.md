@@ -10,8 +10,8 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Fine-tuning Custom Dataset</a></li>
-        <li><a href="#installation">Inference using Fine-tuned Model</a></li>
+        <li><a href="#ftcd">Fine-tuning Custom Dataset</a></li>
+        <li><a href="#iuftm">Inference using Fine-tuned Model</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -27,7 +27,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is a framework for **Indonesian Folklore Storytelling in Japanese using Text-to-Speech Technology**. The models in this project were fine-tuned on a dataset sourced from the YouTube channel of the virtual YouTuber (VTuber) [Suo Sango](https://www.youtube.com/@SuoSango).
+This project **Indonesian Folklore Storytelling in Japanese using Text-to-Speech Technology** proposes an integrated framework for cross-lingual folklore preservation by automating the conversion of Indonesian folk narratives into Japanese speech. The system combines machine translation and text-to-speech (TTS) synthesis: Google Translate converts Indonesian text into Japanese, and a fine-tuned Style-Bert-VITS2 model generates high-quality, expressive speech. The models in this project were fine-tuned on a dataset sourced from the YouTube channel of the virtual YouTuber (VTuber) [Suo Sango](https://www.youtube.com/@SuoSango). 
 
 This work is intended for use within the private research community of the Human-AI Interaction Laboratory at Nara Institute of Science and Technology University (NAIST).
 
@@ -41,7 +41,8 @@ This work is intended for use within the private research community of the Human
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Fine-tuning Custom Dataset
+<a id="ftcd"></a>
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
@@ -49,7 +50,8 @@ This is an example of how to list things you need to use the software and how to
   npm install npm@latest -g
   ```
 
-### Installation
+### Inference using Fine-tuned Model
+<a id="iuftm"></a>
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 

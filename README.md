@@ -51,15 +51,19 @@ This guide outlines the process for fine-tuning a new model with your own custom
 
 Fine-tuning the model is computationally intensive. It is highly recommended to use a machine with a GPU possessing **more than 16 GB of VRAM**.
 
-To provide a reference for expected training times:
+To provide a reference for expected fine-tuning times and Google Drive storage usage:
 *   Our model was fine-tuned on the Suo Sango dataset (~2.5 hours of audio) for 100 epochs.
-*   On a **Google Colab Pro T4 GPU** (16 GB VRAM), this process took approximately **12 hours**.
-*   Performance on other GPUs (extrapolated):
-    *   **L4 GPU:** Estimated **4-6 hours** (2-3x faster than T4).
-    *   **A100 GPU:** Estimated **1.5-3 hours** (4-8x faster than T4).
+*   **Training Time on Various GPUs:**
+    *   **Google Colab Pro T4 GPU** (16 GB VRAM): ~**12 hours**.
+    *   **L4 GPU** (extrapolated): Estimated **4-6 hours** (2-3x faster than T4).
+    *   **A100 GPU** (extrapolated): Estimated **1.5-3 hours** (4-8x faster than T4).
+*   **Storage Considerations:**
+    *   For every 1000 steps (where 1 epoch ≈ 375 steps), the process saves:
+        *   A final model file (`*.safetensors`) of ~**240 MB**.
+        *   A full training checkpoint of ~**1.4 GB+**, required to resume fine-tuning.
+    *   **Important:** While only the latest checkpoint is kept in the target folder, previous checkpoints are moved to your Google Drive's trash. **You must manually empty your trash** to free up this storage space during long training runs.
 
 If you already have a prepared custom dataset, you can proceed to the [Fine-tuning Process](#ftp).
-
 <a id="pcd"></a>
 #### Preparing Custom Dataset
 

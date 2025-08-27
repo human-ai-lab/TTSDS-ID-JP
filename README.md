@@ -69,11 +69,17 @@ If you already have a prepared custom dataset, you can proceed to the [Fine-tuni
 <a id="pcd"></a>
 ### Preparing Custom Dataset
 
-The custom dataset preparation process begins by sourcing audio from a YouTube video, downloaded as a `*.wav` file using the `yt-dlp` library. To ensure high-quality results, it is crucial to select videos focused on clear storytelling without background music or sound effects. The resulting audio file is then segmented based on manually annotated timestamps created in Audacity, using the `pydub` library to accurately split the audio at precise phrase boundaries. For the text transcript, Japanese novels can be sourced from [Aozora Bunko](https://www.aozora.gr.jp/); this text is subsequently split into sentences using standard Python string operations based on punctuation. The following sections detail the code and methodology for each step in this workflow.
+The custom dataset preparation process begins by sourcing audio from a YouTube video, downloaded as a `*.wav` file using the `yt-dlp` library. To ensure high-quality results, it is crucial to select videos focused on clear storytelling without background music or sound effects. The resulting audio file is then segmented based on manually annotated timestamps created in Audacity, using the `pydub` library to accurately split the audio at precise phrase boundaries. For the text transcript, Japanese novels can be sourced from [Aozora Bunko](https://www.aozora.gr.jp/); this text is subsequently split into sentences using standard Python string operations based on punctuation. 
 
-1. npm
+**Note:** `yt-dlp` cannot download videos marked as "Members Only" without providing YouTube account cookies from an account that has access to the corresponding channel's membership.
+
+The following sections detail the code and methodology for each step in this workflow.
+
+1. Download youtube video as a `*.wav` file using yt-dlp (to ensure clean dependency management, it is recommended to create a new Conda environment before installing `yt-dlp`.)
   ```sh
-  npm install npm@latest -g
+  pip install yt-dlp
+  pip install ffmpeg
+  yt-dlp --extract-audio --audio-format wav "youtube-link"
   ```
 
 <a id="ftp"></a>

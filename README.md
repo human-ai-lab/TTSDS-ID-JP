@@ -10,7 +10,13 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#ftcd">Fine-tuning Custom Dataset</a></li>
+        <li>
+          <a href="#ftcd">Fine-tuning Custom Dataset</a>
+          <ul>
+            <li><a href="#pcd">Preparing Custom Dataset</a></li>
+            <li><a href="#ftp">Fine-tuning Process</a></li>
+          </ul>
+        </li>
         <li><a href="#iuftm">Inference using Fine-tuned Model</a></li>
       </ul>
     </li>
@@ -46,11 +52,27 @@ This guide outlines the process for fine-tuning a new model with your own custom
 <a id="ftcd"></a>
 ### Fine-tuning a Custom Dataset
 
-This is an example of how to list things you need to use the software and how to install them.
+Fine-tuning the model is computationally intensive. It is highly recommended to use a machine with a GPU possessing **more than 16 GB of VRAM**.
+
+To provide a reference for expected training times:
+*   Our model was fine-tuned on the Suo Sango dataset (~2.5 hours of audio) for 100 epochs.
+*   On a **Google Colab Pro T4 GPU** (16 GB VRAM), this process took approximately **12 hours**.
+*   Performance on other GPUs (extrapolated):
+    *   **L4 GPU:** Estimated **4-6 hours** (2-3x faster than T4).
+    *   **A100 GPU:** Estimated **1.5-3 hours** (4-8x faster than T4).
+
+If you already have a prepared custom dataset, you can proceed to the [Fine-tuning Process](#ftp).
+
+<a id="pcd"></a>
+#### Preparing Custom Dataset
+
 * npm
   ```sh
   npm install npm@latest -g
   ```
+
+<a id="ftp"></a>
+#### Fine-tuning Process
 
 <a id="iuftm"></a>
 ### Inference using Fine-tuned Model

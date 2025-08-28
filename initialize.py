@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 from huggingface_hub import hf_hub_download
 from style_bert_vits2.logging import logger
+from huggingface_hub import login
 
 def download_bert_models():
     with open("bert/bert_models.json", encoding="utf-8") as fp:
@@ -34,4 +35,5 @@ def download_models():
 
 if __name__ == "__main__":
     download_bert_models()
+    login("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")
     download_models()

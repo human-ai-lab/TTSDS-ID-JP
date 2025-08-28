@@ -331,7 +331,7 @@ Inference does not require many computational resources. In Google Colab, runnin
   display(Audio(filename=PATH + 'malin_kundang.wav'))
   ```
 
-5. Generating audio file from text
+5. Generating audio file from text (input text in `story_text.txt` or below `input_text_story`)
   ```sh
   import os
   
@@ -364,7 +364,8 @@ Inference does not require many computational resources. In Google Colab, runnin
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-a
+![User Interface](images/ui.png)
+![Original and Generated Audio Waveform and Mel Spectogram](images/wavform_spec.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

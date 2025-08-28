@@ -276,10 +276,12 @@ Inference does not require many computational resources. In Google Colab, runnin
 <a id="uyod"></a>
 ### Using Your Own Device
 
-1. Clone `TTSDS-ID-JP` repository
+1. Clone `TTSDS-ID-JP` repository and install required packages
   ```sh
   cd path/to/cloned/ttsds-id-jp/repository
   git clone https://your_github_account_name:token@github.com/human-ai-lab/TTSDS-ID-JP.git ### CHANGE HERE ###
+  pip install "torch<2.4" "torchaudio<2.4"
+  pip install --system -r requirements_colab.txt
   ```
   
 2. Run `run_app.bat` using the command prompt, or double-click the file
@@ -289,36 +291,73 @@ Inference does not require many computational resources. In Google Colab, runnin
   ```
 
 <a id="ugc"></a>
-### Using Google Colab
+### Using Google Colab **(recommended)**
 1. Clone `TTSDS-ID-JP` repository
   ```sh
   !git clone https://your_github_account_name:token@github.com/human-ai-lab/TTSDS-ID-JP.git ### CHANGE HERE ###
   ```
 
-2. a
-```sh
-  a
-```
+2. Install `uv` and required packages (you may also use `pip`; using `uv` is optional)
+  ```sh
+  import os
+  
+  os.environ["PATH"] += ":/root/.cargo/bin"
+  
+  !curl -LsSf https://astral.sh/uv/install.sh | sh
+  %cd TTSDS-ID-JP
+  !uv pip install "torch<2.4" "torchaudio<2.4"
+  !uv pip install --system -r requirements_colab.txt
+  ```
 
-3. a
-```sh
-  a
-```
+3. Download model for BERT and Suo Sango model
+  ```sh
+  from huggingface_hub import login
+  
+  login("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")
+  
+  !python initialize.py
+  ```
 
-4. **(Optional)** a
-```sh
-  a
-```
+4. **(Optional)** Display Pregenerated Story
+  ```sh
+  !pip install ipython
+  
+  from IPython.display import Audio, display
+  
+  PATH = './story_data/jp/'
+  
+  display(Audio(filename=PATH + 'danau_toba.wav'))
+  display(Audio(filename=PATH + 'kisah_putri_ular.wav'))
+  display(Audio(filename=PATH + 'malin_kundang.wav'))
+  ```
 
-5. a
-```sh
-  a
-```
+5. Generating audio file from text
+  ```sh
+  import os
+  
+  input_text_story = "Hujan deras kemarin membuat saya kebingungan..."
+  
+  if os.path.exists('./story_text'):
+      with open('./story_text', 'r', encoding='utf-8') as f:
+          text = f.read().strip()
+          if text == '':
+              text = input_text_story
+  else:
+      text = input_text_story
+  
+  !python _inference_colab.py "$text"
+  ```
 
-6. a
-```sh
-  a
-```
+6. Display generated audio
+  ```sh
+  !pip install ipython
+  
+  from IPython.display import Audio, display
+  
+  PATH = './_connector/'
+  
+  display(Audio(filename=PATH + 'generated_output.wav'))
+  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

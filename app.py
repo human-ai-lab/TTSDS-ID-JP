@@ -3,14 +3,15 @@ import os
 import sys
 import time
 import subprocess
-from translate import translate_text_to_japanese
+from googletrans import Translator
 
 TRANSLATED_TEXT_PATH = "./_connector/translated_text.txt"
 OUTPUT_AUDIO_PATH = "./_connector/generated_output.wav"
 
 def generate_sound(text):
     st.write("**Translated Text:**")
-    translated_text = translate_text_to_japanese(text)
+    translator = Translator()
+    translated_text = translator.translate(text, src="auto", dest="ja").text
     st.write(translated_text)
     with open(TRANSLATED_TEXT_PATH, "w", encoding="utf-8") as f:
         f.write(translated_text)

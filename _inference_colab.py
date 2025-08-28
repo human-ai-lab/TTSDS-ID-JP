@@ -64,6 +64,6 @@ if __name__ == "__main__":
     
     text = sys.argv[1]
     translator = Translator()
-    text = translator.translate(text, src="auto", dest="ja")
+    text = translator.translate(text, src="auto", dest="ja").text
     generate_audio(text)
     

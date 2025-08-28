@@ -2,7 +2,7 @@ cmudict
 cn2an
 dotenv
 g2p_en
-googletrans
+googletrans==4.0.0-rc1
 jieba
 loguru
 num2words

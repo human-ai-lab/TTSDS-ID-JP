@@ -11,7 +11,6 @@ from style_bert_vits2.constants import (
 )
 from style_bert_vits2.nlp.japanese import pyopenjtalk_worker as pyopenjtalk
 from style_bert_vits2.tts_model import TTSModelHolder
-from googletrans import Translator
 from pathlib import Path
 import soundfile as sf
 import torch
@@ -31,9 +30,6 @@ def generate_audio(text: str):
     assert model_holder.current_model is not None
 
     speaker_id = model_holder.current_model.spk2id["suo_sango"]
-    
-    translator = Translator()
-    text = translator.translate(text, src="auto", dest="ja")
     
     sr, audio = model_holder.current_model.infer(
         text=text,

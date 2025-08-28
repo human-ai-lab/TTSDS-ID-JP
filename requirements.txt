@@ -2,6 +2,7 @@ cmudict
 cn2an
 dotenv
 g2p_en
+googletrans
 GPUtil
 jieba
 loguru

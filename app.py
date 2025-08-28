@@ -1,8 +1,9 @@
 import streamlit as st
 import os
+import sys
 import time
+import subprocess
 from translate import translate_text_to_japanese
-from _inference_only import generate_audio
 
 TRANSLATED_TEXT_PATH = "./_connector/translated_text.txt"
 OUTPUT_AUDIO_PATH = "./_connector/generated_output.wav"
@@ -20,7 +21,7 @@ def generate_sound(text):
     loading_placeholder.write("⏳ Starting audio generation...")
     
     if os.path.exists(OUTPUT_AUDIO_PATH): os.remove(OUTPUT_AUDIO_PATH)
-    generate_audio(text)
+    subprocess.run([f"{sys.executable}", "_inference_only,py", text])
     
     st.write("**Audio:**")
     

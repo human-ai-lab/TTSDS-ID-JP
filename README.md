@@ -17,7 +17,13 @@
             <li><a href="#ftp">Fine-tuning Process</a></li>
           </ul>
         </li>
-        <li><a href="#iuftm">Inference using Fine-tuned Model</a></li>
+        <li>
+          <a href="#iuftm">Inference using Fine-tuned Model</a>
+          <ul>
+            <li><a href="#uyod">Using Your Own Device</a></li>
+            <li><a href="#ugc">Using Google Colab</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -263,7 +269,13 @@ Follow the configuration below for your text transcript file and audio files. Yo
 ## Inference using Fine-tuned Model
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1XUIlCzJQfIi2hFJwTtE1VUr67ax4qJYX?usp=sharing)
 
-a
+Inference does not require many computational resources. In Google Colab, running on a CPU-only runtime also works well.
+
+<a id="uyod"></a>
+### Using Your Own Device
+
+<a id="ugc"></a>
+### Using Google Colab
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

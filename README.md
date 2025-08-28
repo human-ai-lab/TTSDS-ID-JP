@@ -373,7 +373,7 @@ Inference does not require many computational resources. In Google Colab, runnin
 ### User Interface with Streamlit Example when Running Inference
 ![User Interface](images/ui.png)
 
-### Original and Generated Audio Waveform and Mel Spectogram Sample
+### Original and Generated Audio Waveform and Mel Spectrogram Sample
 ![Original and Generated Audio Waveform and Mel Spectogram](images/wavform_spec.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -171,6 +171,8 @@ Follow the configuration below for your text transcript file and audio files. Yo
 **If you want to resume fine-tuning from a checkpoint, run steps 1, 2, 3, and 6, and skip steps 4 and 5.**
 
 1. Clone `Style-Bert-VITS2` repository and install `uv` and required packages (you may also use `pip`; using `uv` is optional)
+
+   **Note:** The Google Colab session may restart, but just ignore it and proceed to the next step.
   ```sh
   import os
   
@@ -274,8 +276,49 @@ Inference does not require many computational resources. In Google Colab, runnin
 <a id="uyod"></a>
 ### Using Your Own Device
 
+1. Clone `TTSDS-ID-JP` repository
+  ```sh
+  cd path/to/cloned/ttsds-id-jp/repository
+  git clone https://your_github_account_name:token@github.com/human-ai-lab/TTSDS-ID-JP.git ### CHANGE HERE ###
+  ```
+  
+2. Run `run_app.bat` using the command prompt, or double-click the file
+  ```sh
+  cd path/to/cloned/ttsds-id-jp/repository
+  run_app.bat
+  ```
+
 <a id="ugc"></a>
 ### Using Google Colab
+1. Clone `TTSDS-ID-JP` repository
+  ```sh
+  !git clone https://your_github_account_name:token@github.com/human-ai-lab/TTSDS-ID-JP.git ### CHANGE HERE ###
+  ```
+
+2. a
+```sh
+  a
+```
+
+3. a
+```sh
+  a
+```
+
+4. **(Optional)** a
+```sh
+  a
+```
+
+5. a
+```sh
+  a
+```
+
+6. a
+```sh
+  a
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -382,6 +382,12 @@ Inference does not require many computational resources. In Google Colab, runnin
 + [ttsds/TTSDS-benchmark](https://github.com/ttsds/ttsds)
 + [othneildrew/README-Template](https://github.com/othneildrew/Best-README-Template)
 
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+I would like to express my sincere gratitude to Professor Bagus Tris Atmaja, Professor Sakti Sakriani, and Professor Hiroki Ouichi for providing me with the opportunity to undertake this research project during my internship and for their invaluable guidance throughout its development. Their expertise and insightful feedback were instrumental to the completion of this work.
+
+I also extend my thanks to Nara Institute of Science and Technology University (NAIST) for providing the academic environment and resources that made this research possible. Furthermore, I acknowledge the support of my colleagues and the research community whose work laid the foundation for this study.
+
 <!-- LICENSE -->
 ## License
 

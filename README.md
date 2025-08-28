@@ -283,8 +283,14 @@ Inference does not require many computational resources. In Google Colab, runnin
   pip install "torch<2.4" "torchaudio<2.4"
   pip install --system -r requirements_colab.txt
   ```
-  
-2. Run `run_app.bat` using the command prompt, or double-click the file
+
+2. Run `intialize.bat` using the command prompt, or double-click the file **(this step needed for first time only)**
+  ```sh
+  cd path/to/cloned/ttsds-id-jp/repository
+  intialize.bat
+  ```
+
+3. Run `run_app.bat` using the command prompt, or double-click the file
   ```sh
   cd path/to/cloned/ttsds-id-jp/repository
   run_app.bat

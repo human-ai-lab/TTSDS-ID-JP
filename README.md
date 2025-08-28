@@ -75,7 +75,7 @@ The custom dataset preparation process begins by sourcing audio from a YouTube v
 
 The following sections detail the methodology and provide code references for each step in this workflow.
 
-1. Download youtube video as a `*.wav` file using yt-dlp (to ensure clean dependency management, it is recommended to create a new Conda environment before installing `yt-dlp`.)
+1. Download youtube video as a `*.wav` file using yt-dlp (to ensure clean dependency management, it is recommended to create a new Conda environment before installing `yt-dlp`)
   ```sh
   pip install yt-dlp
   pip install ffmpeg
@@ -99,7 +99,7 @@ The following sections detail the methodology and provide code references for ea
                   for part in row:
                       text = buffer + part
                       if len(text) >= 10 or title:
-                          write_file.write(f"dataset/model_name/model_name{index//size+1:03d}_{index%size+1:03d}.wav|0|{text}\n") ### CHANGE HERE ###
+                          write_file.write(f"model_name{index//size+1:03d}_{index%size+1:03d}.wav|style_name|JP|{text}\n") ### CHANGE HERE ###
                           index += 1
                           buffer = ''
                           title = 0
@@ -107,7 +107,7 @@ The following sections detail the methodology and provide code references for ea
                           buffer = text + '。'                            
   ```
 
-3. Split the audio file (each audio file has a different optimal silence threshold; always experiment to find the right `silence_threshold` value.)
+3. Split the audio file (each audio file has a different optimal silence threshold; always experiment to find the right `silence_threshold` value)
   ```sh
   pip install pydub
   ```
@@ -146,7 +146,56 @@ The following sections detail the methodology and provide code references for ea
 ### Fine-tuning Process
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xPZeCKeJKevm_pEavow_54CnER_DIqsK?usp=sharing)
 
-1. Clone `Style-Bert-VITS2` repo
+Follow the configuration below for your text transcript file and audio files. You don’t have to use `style1/` folders, you can put all audio data in the `raw/` folder.
+```
+├── path/to/
+│   ├── model_name
+│   │   ├── esd.list ### FILE CONTAINS TEXT TRANSCRIPT ###
+│   │   ├── raw/
+│   │   │   ├── foo.wav
+│   │   │   ├── bar.mp3
+│   │   │   ├── style1/
+│   │   │   │   ├── baz.wav
+│   │   │   │   ├── qux.wav
+│   │   │   ├── style2/
+│   │   │   │   ├── corge.wav
+│   │   │   │   ├── grault.wav
+```
+
+1. Clone `Style-Bert-VITS2` repository and install `uv` and required packages (you may also use `pip`; using `uv` is optional)
+  ```sh
+  import os
+  
+  os.environ["PATH"] += ":/root/.cargo/bin"
+  
+  !curl -LsSf https://astral.sh/uv/install.sh | sh
+  !git clone https://github.com/litagin02/Style-Bert-VITS2.git
+  %cd Style-Bert-VITS2/
+  !uv pip install --system -r requirements-colab.txt --no-progress
+  !python initialize.py --skip_default_models
+  
+  exit()
+  ```
+
+2. a. Mount Google Drive (you will be asked for access to your Drive; allow all permissions)
+  ```sh
+  from google.colab import drive
+  
+  drive.mount('/content/drive')
+  ```
+
+2. b. Initiation
+  ```sh
+  %cd /content/Style-Bert-VITS2/
+
+  dataset_root = "/content/drive/MyDrive/path/to/dataset" ### CHANGE HERE ###
+  assets_root = "/content/drive/MyDrive/path/to/model_name" ### CHANGE HERE ###
+  
+  import yaml
+  
+  with open("configs/paths.yml", "w", encoding="utf-8") as f:
+      yaml.dump({"dataset_root": dataset_root, "assets_root": assets_root}, f)
+  ```
 
 <a id="iuftm"></a>
 ## Inference using Fine-tuned Model

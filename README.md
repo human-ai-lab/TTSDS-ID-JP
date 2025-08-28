@@ -162,6 +162,8 @@ Follow the configuration below for your text transcript file and audio files. Yo
 │   │   │   │   ├── grault.wav
 ```
 
+**If you want to resume fine-tuning from a checkpoint, run steps 1, 2, 3, and 6, and skip steps 4 and 5.**
+
 1. Clone `Style-Bert-VITS2` repository and install `uv` and required packages (you may also use `pip`; using `uv` is optional)
   ```sh
   import os
@@ -177,24 +179,84 @@ Follow the configuration below for your text transcript file and audio files. Yo
   exit()
   ```
 
-2. a. Mount Google Drive (you will be asked for access to your Drive; allow all permissions)
+2. Mount Google Drive (you will be asked for access to your Drive; allow all permissions)
   ```sh
   from google.colab import drive
   
   drive.mount('/content/drive')
   ```
 
-2. b. Initiation
+3. Google Drive dataset location path initiation
   ```sh
   %cd /content/Style-Bert-VITS2/
 
   dataset_root = "/content/drive/MyDrive/path/to/dataset" ### CHANGE HERE ###
-  assets_root = "/content/drive/MyDrive/path/to/model_name" ### CHANGE HERE ###
+  assets_root = "/content/drive/MyDrive/path/to/saved/folder/model_name" ### CHANGE HERE ###
   
   import yaml
   
   with open("configs/paths.yml", "w", encoding="utf-8") as f:
       yaml.dump({"dataset_root": dataset_root, "assets_root": assets_root}, f)
+  ```
+
+4. Fine-tuning parameters initiation
+  ```sh
+  model_name = "suo_sango_otona" ### CHANGE HERE ###
+  use_jp_extra = True
+  batch_size = 4 ### FREE TO CHANGE ###
+  epochs = 100 ### FREE TO CHANGE ###
+  save_every_steps = 1000 ### FREE TO CHANGE (SET TO HIGHER VALUE TO SAVE STORAGE) ###
+  normalize = False
+  trim = False
+  yomi_error = "skip"
+  ```
+
+5. Preprocessing
+  ```sh
+  from gradio_tabs.train import preprocess_all
+  from style_bert_vits2.nlp.japanese import pyopenjtalk_worker
+  
+  pyopenjtalk_worker.initialize_worker()
+  
+  preprocess_all(
+      model_name=model_name,
+      batch_size=batch_size,
+      epochs=epochs,
+      save_every_steps=save_every_steps,
+      num_processes=2,
+      normalize=normalize,
+      trim=trim,
+      freeze_EN_bert=False,
+      freeze_JP_bert=False,
+      freeze_ZH_bert=False,
+      freeze_style=False,
+      freeze_decoder=False,
+      use_jp_extra=use_jp_extra,
+      val_per_lang=0,
+      log_interval=200,
+      yomi_error=yomi_error,
+  )
+  ```
+
+6. Fine-tuning start
+  ```sh
+  model_name = "suo_sango_otona" ### CHANGE HERE ###
+  
+  import yaml
+  from gradio_tabs.train import get_path
+  
+  paths = get_path(model_name)
+  dataset_path = str(paths.dataset_path)
+  config_path = str(paths.config_path)
+  
+  with open("default_config.yml", "r", encoding="utf-8") as f:
+      yml_data = yaml.safe_load(f)
+  yml_data["model_name"] = model_name
+  with open("config.yml", "w", encoding="utf-8") as f:
+      yaml.dump(yml_data, f, allow_unicode=True)
+  ```
+  ```sh
+  !python train_ms_jp_extra.py --config {config_path} --model {dataset_path} --assets_root {assets_root}
   ```
 
 <a id="iuftm"></a>

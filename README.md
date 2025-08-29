@@ -335,7 +335,8 @@ Next, update the `model_name` and `model_path` variables in either `_inference_o
 4. **(Optional)** Display Pregenerated Story
   ```sh
   !pip install ipython
-  
+  ```
+  ```sh
   from IPython.display import Audio, display
   
   PATH = './story_data/jp/'
@@ -365,7 +366,8 @@ Next, update the `model_name` and `model_path` variables in either `_inference_o
 6. Display generated audio
   ```sh
   !pip install ipython
-  
+  ```
+  ```sh  
   from IPython.display import Audio, display
   
   PATH = './_connector/'

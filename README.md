@@ -331,9 +331,9 @@ Next, update the `model_name` and `model_path` variables in either `_inference_o
   ```sh
   from huggingface_hub import login
   
-  login("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") ### (SAMPLE TOKEN) COPY VALID TOKEN HERE ###
-  
-  !python initialize.py
+  token = "" ### (SAMPLE TOKEN) COPY VALID TOKEN HERE ###
+
+  !python initialize.py "$token"
   ```
 
 4. **(Optional)** Display Pregenerated Story

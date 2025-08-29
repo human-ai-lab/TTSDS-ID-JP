@@ -35,5 +35,6 @@ def download_models():
 
 if __name__ == "__main__":
     download_bert_models()
-    login("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")
+    # login("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")
     download_models()
+

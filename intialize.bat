@@ -1,5 +1,5 @@
 @echo off
-python initialize.py
+python initialize.py "false"
 if errorlevel 1 (
     echo Error occurred during download!
     pause
@@ -7,3 +7,4 @@ if errorlevel 1 (
     echo Download completed successfully!
 )
 pause
+

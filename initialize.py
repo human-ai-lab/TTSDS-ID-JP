@@ -1,3 +1,4 @@
+import sys
 import json
 from pathlib import Path
 from huggingface_hub import hf_hub_download
@@ -38,3 +39,4 @@ if __name__ == "__main__":
     download_bert_models()
     if len(sys.argv) > 1 and sys.argv[1].lower() == "true":
         download_models()
+

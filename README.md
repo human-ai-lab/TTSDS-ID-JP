@@ -282,7 +282,7 @@ Inference does not require many computational resources. In Google Colab, runnin
 Next, update the `model_name` and `model_path` variables in either `_inference_only.py` or `_inference_colab.py`, as shown in the example below:
   ```sh
   model_name = "suo_sango_otona" ### CHANGE TO YOUR MODEL NAME ###
-  model_path = assets_root / model_name / "suo_sango_otona_e100.safetensors" ### CHANGE .safetensors FILE NAEM ###
+  model_path = assets_root / model_name / "suo_sango_otona_e100.safetensors" ### CHANGE .safetensors FILE NAME ###
   ```
 
 <a id="uyod"></a>

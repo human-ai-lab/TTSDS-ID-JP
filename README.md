@@ -271,7 +271,19 @@ Follow the configuration below for your text transcript file and audio files. Yo
 ## Inference using Fine-tuned Model
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1XUIlCzJQfIi2hFJwTtE1VUr67ax4qJYX?usp=sharing)
 
-Inference does not require many computational resources. In Google Colab, running on a CPU-only runtime also works well.
+Inference does not require many computational resources. In Google Colab, running on a CPU-only runtime also works well. If you are using your own fine-tuned model, please copy it according to the directory structure below:
+```
+├── model_assets
+│   ├── model_name
+│   │   ├── config.json
+│   │   ├── style_vectors.npy
+│   │   ├── *.safetensors
+```
+Next, update the `model_name` and `model_path` variables in either `_inference_only.py` or `_inference_colab.py`, as shown in the example below:
+  ```sh
+  model_name = "suo_sango_otona" ### CHANGE TO YOUR MODEL NAME ###
+  model_path = assets_root / model_name / "suo_sango_otona_e100.safetensors" ### CHANGE .safetensors FILE NAEM ###
+  ```
 
 <a id="uyod"></a>
 ### Using Your Own Device

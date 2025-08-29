@@ -60,10 +60,10 @@ Fine-tuning the model is computationally intensive. It is highly recommended to 
 
 To provide a reference for expected fine-tuning times and Google Drive storage usage:
 *   Our model was fine-tuned on the Suo Sango dataset (~2.5 hours of audio) for 100 epochs.
-*   **Training Time on Various GPUs:**
+*   **Fine-Tuning Time on Various GPUs:**
     *   **Google Colab Pro T4 GPU** (16 GB VRAM): ~**12 hours**.
-    *   **L4 GPU** (extrapolated): Estimated **4-6 hours** (2-3x faster than T4).
-    *   **A100 GPU** (extrapolated): Estimated **1.5-3 hours** (4-8x faster than T4).
+    *   **L4 GPU**: Estimated **4-6 hours** (2-3x faster than T4).
+    *   **A100 GPU**: Estimated **1.5-3 hours** (4-8x faster than T4).
 *   **Storage Considerations:**
     *   For every 1000 steps (where 1 epoch ≈ 375 steps), the process saves:
         *   A final model file (`*.safetensors`) of ~**240 MB**.

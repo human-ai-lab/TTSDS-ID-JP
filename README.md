@@ -296,10 +296,12 @@ Next, update the `model_name` and `model_path` variables in either `_inference_o
   pip install --system -r requirements_colab.txt
   ```
 
-2. Run `intialize.bat` using the command prompt, or double-click the file **(this step needed for first time only)**
+2. Run `intialize.bat` using the command prompt (set "false" to "true" and copy valid token to `initialize.py` to download pre-fine-tuned model Suo Sango)
+
+**Note: (this step needed for first time only)**
   ```sh
   cd path/to/cloned/ttsds-id-jp/repository
-  intialize.bat
+  intialize.py "false"
   ```
 
 3. Run `run_app.bat` using the command prompt, or double-click the file

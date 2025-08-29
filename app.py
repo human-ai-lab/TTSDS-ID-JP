@@ -22,7 +22,7 @@ def generate_sound(text):
     loading_placeholder.write("⏳ Starting audio generation...")
     
     if os.path.exists(OUTPUT_AUDIO_PATH): os.remove(OUTPUT_AUDIO_PATH)
-    subprocess.run([f"{sys.executable}", "_inference_only,py", text])
+    subprocess.run([f"{sys.executable}", "_inference_only.py", text])
     
     st.write("**Audio:**")
     
@@ -66,3 +66,4 @@ if st.button("Generate Sound", key="generate_btn"):
         generate_sound(user_input)
     else:
         st.warning("Please enter some text first!")
+

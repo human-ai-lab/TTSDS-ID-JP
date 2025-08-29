@@ -293,7 +293,7 @@ Next, update the `model_name` and `model_path` variables in either `_inference_o
   cd path/to/cloned/ttsds-id-jp/repository
   git clone https://github.com/human-ai-lab/TTSDS-ID-JP.git
   pip install "torch<2.4" "torchaudio<2.4"
-  pip install --system -r requirements_colab.txt
+  pip install --system -r requirements.txt
   ```
 
 2. Run `intialize.bat` using the command prompt (set "false" to "true" and copy valid token to `initialize.py` to download pre-fine-tuned model Suo Sango)

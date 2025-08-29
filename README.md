@@ -39,7 +39,7 @@
 
 This **"Indonesian Folklore Storytelling in Japanese with Text-to-Speech (TTSDS-ID-JP)"** project proposes an integrated framework for cross-lingual folklore preservation by automating the conversion of Indonesian folk narratives into Japanese speech. The system combines machine translation and text-to-speech (TTS) synthesis: Google Translate converts Indonesian text into Japanese, and a fine-tuned Style-Bert-VITS2 model generates high-quality, expressive speech. The models in this project were fine-tuned on a dataset sourced from the YouTube channel of the virtual YouTuber (VTuber) [Suo Sango](https://www.youtube.com/@SuoSango). 
 
-This work is intended for use within the private research community of the Human-AI Interaction Laboratory at Nara Institute of Science and Technology University (NAIST).
+This work is intended for use within the private research community of the Human-AI Interaction Laboratory at Nara Institute of Science and Technology University (NAIST). For scholarly investigations, please contact the author at michaelbrian2002@gmail.com to obtain either the pre-fine-tuned model on `Hugging Face` or your own fine-tuned model.
 
 **Note:** As this repository contains models fine-tuned on a custom dataset, you must provide your own tokens and credentials to clone and use it.
 
@@ -279,8 +279,7 @@ Inference does not require many computational resources. In Google Colab, runnin
 1. Clone `TTSDS-ID-JP` repository and install required packages
   ```sh
   cd path/to/cloned/ttsds-id-jp/repository
-  # git clone https://github.com/human-ai-lab/TTSDS-ID-JP.git
-  git clone https://your_github_account_name:token@github.com/human-ai-lab/TTSDS-ID-JP.git ### CHANGE HERE ###
+  git clone https://github.com/human-ai-lab/TTSDS-ID-JP.git
   pip install "torch<2.4" "torchaudio<2.4"
   pip install --system -r requirements_colab.txt
   ```
@@ -301,8 +300,7 @@ Inference does not require many computational resources. In Google Colab, runnin
 ### Using Google Colab **(recommended)**
 1. Clone `TTSDS-ID-JP` repository
   ```sh
-  # !git clone https://github.com/human-ai-lab/TTSDS-ID-JP.git
-  !git clone https://your_github_account_name:token@github.com/human-ai-lab/TTSDS-ID-JP.git ### CHANGE HERE ###
+  !git clone https://github.com/human-ai-lab/TTSDS-ID-JP.git
   ```
 
 2. Install `uv` and required packages (you may also use `pip`; using `uv` is optional)
@@ -321,7 +319,7 @@ Inference does not require many computational resources. In Google Colab, runnin
   ```sh
   from huggingface_hub import login
   
-  # login("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")
+  login("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") ### (SAMPLE TOKEN) COPY VALID TOKEN HERE ###
   
   !python initialize.py
   ```

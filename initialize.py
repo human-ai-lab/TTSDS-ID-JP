@@ -35,7 +35,8 @@ def download_models():
 
 if __name__ == "__main__":
     download_bert_models()
-    login("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") ### CHANGE HERE (INSERT ACCESS TOKEN) ###
+    login("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") ### (SAMPLE TOKEN) COPY VALID TOKEN HERE ###
     download_models()
+
 
 

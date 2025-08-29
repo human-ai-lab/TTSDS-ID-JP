@@ -327,13 +327,9 @@ Next, update the `model_name` and `model_path` variables in either `_inference_o
   !uv pip install --system -r requirements_colab.txt
   ```
 
-3. Download model for BERT and Suo Sango model
+3. Download model for BERT and Suo Sango model (set "false" to "true" and copy valid token to `initialize.py` to download pre-fine-tuned model Suo Sango)
   ```sh
-  from huggingface_hub import login
-  
-  token = "" ### (SAMPLE TOKEN) COPY VALID TOKEN HERE ###
-
-  !python initialize.py "$token"
+  !python initialize.py "false"
   ```
 
 4. **(Optional)** Display Pregenerated Story

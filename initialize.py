@@ -15,6 +15,7 @@ def download_bert_models():
                 hf_hub_download(v["repo_id"], file, local_dir=local_path)
 
 def download_models():
+    login("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") ### (SAMPLE TOKEN) COPY VALID TOKEN HERE ###
     model_files  = {
         "MichaelJP/TTSDS-ID-JP-SUO-SANGO": [
             "suo_sango_otona/config.json",
@@ -35,8 +36,5 @@ def download_models():
 
 if __name__ == "__main__":
     download_bert_models()
-    login("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") ### (SAMPLE TOKEN) COPY VALID TOKEN HERE ###
-    download_models()
-
-
-
+    if len(sys.argv) > 1 and sys.argv[1].lower() == "true":
+        download_models()

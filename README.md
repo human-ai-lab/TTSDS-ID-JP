@@ -279,6 +279,7 @@ Inference does not require many computational resources. In Google Colab, runnin
 1. Clone `TTSDS-ID-JP` repository and install required packages
   ```sh
   cd path/to/cloned/ttsds-id-jp/repository
+  # git clone https://github.com/human-ai-lab/TTSDS-ID-JP.git
   git clone https://your_github_account_name:token@github.com/human-ai-lab/TTSDS-ID-JP.git ### CHANGE HERE ###
   pip install "torch<2.4" "torchaudio<2.4"
   pip install --system -r requirements_colab.txt
@@ -300,6 +301,7 @@ Inference does not require many computational resources. In Google Colab, runnin
 ### Using Google Colab **(recommended)**
 1. Clone `TTSDS-ID-JP` repository
   ```sh
+  # !git clone https://github.com/human-ai-lab/TTSDS-ID-JP.git
   !git clone https://your_github_account_name:token@github.com/human-ai-lab/TTSDS-ID-JP.git ### CHANGE HERE ###
   ```
 
@@ -319,7 +321,7 @@ Inference does not require many computational resources. In Google Colab, runnin
   ```sh
   from huggingface_hub import login
   
-  login("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")
+  # login("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")
   
   !python initialize.py
   ```

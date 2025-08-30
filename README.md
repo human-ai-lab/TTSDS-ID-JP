@@ -304,10 +304,14 @@ Next, update the `model_name` and `model_path` variables in either `_inference_o
   python initialize.py "false"
   ```
 
-3. Run `run_app.bat` using the command prompt, or double-click the file
+3. Run `run_app.bat` or `app.py` using the command prompt, or double-click the `run_app.bat` file
   ```sh
   cd path/to/cloned/ttsds-id-jp/repository
   run_app.bat
+  ```
+  ```sh
+  cd path/to/cloned/ttsds-id-jp/repository
+  python -m streamlit run app.py
   ```
 
 <a id="ugc"></a>

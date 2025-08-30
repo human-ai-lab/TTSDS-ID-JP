@@ -1,10 +1,6 @@
-cmudict
-cn2an
 dotenv
-g2p_en
 googletrans==4.0.0-rc1
 GPUtil
-jieba
 loguru
 num2words
 numpy<2
@@ -13,10 +9,10 @@ psutil
 pyannote.audio>=3.1.0
 pydantic
 pyopenjtalk-dict
-pypinyin
 pyworld-prebuilt
 requests
 streamlit
 torch<2.4
+torchvision
 transformers
 umap-learn

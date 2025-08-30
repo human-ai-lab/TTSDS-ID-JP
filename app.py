@@ -22,7 +22,7 @@ def generate_sound(text):
     loading_placeholder.write("⏳ Starting audio generation...")
     
     if os.path.exists(OUTPUT_AUDIO_PATH): os.remove(OUTPUT_AUDIO_PATH)
-    subprocess.run([f"{sys.executable}", "_inference_only.py", text])
+    subprocess.Popen([f"{sys.executable}", "_inference_only.py"])
     
     st.write("**Audio:**")
     

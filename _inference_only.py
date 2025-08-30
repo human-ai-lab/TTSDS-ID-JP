@@ -53,3 +53,10 @@ def generate_audio(text: str):
     )
         
     sf.write("./_connector/generated_output.wav", audio, sr)
+
+TRANSLATED_TEXT_PATH = "./_connector/translated_text.txt"
+
+with open(TRANSLATED_TEXT_PATH, "r", encoding="utf-8") as f:
+    translated_text = f.read()
+
+generate_audio(translated_text)

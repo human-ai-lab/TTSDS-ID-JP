@@ -13,9 +13,9 @@ reference_datasets = [
 suite = BenchmarkSuite(
     datasets=datasets,
     reference_datasets=reference_datasets,
-    write_to_file="benchmark_results.csv",  # Optional: save results to CSV
-    skip_errors=True,  # Optional: skip failed benchmarks
-    include_environment=False,  # Optional: exclude environment benchmarks
+    write_to_file="benchmark_results2.csv",
+    skip_errors=True,
+    multilingual=True,
 )
 
 # Run benchmarks

@@ -4,9 +4,12 @@ import sys
 import time
 import subprocess
 from googletrans import Translator
+from style_bert_vits2.nlp.japanese import pyopenjtalk_worker as pyopenjtalk
 
 TRANSLATED_TEXT_PATH = "./_connector/translated_text.txt"
 OUTPUT_AUDIO_PATH = "./_connector/generated_output.wav"
+
+pyopenjtalk.initialize_worker()
 
 def generate_sound(text):
     st.write("**Translated Text:**")

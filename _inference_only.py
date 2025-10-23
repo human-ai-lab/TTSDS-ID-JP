@@ -9,13 +9,10 @@ from style_bert_vits2.constants import (
     DEFAULT_STYLE,
     DEFAULT_STYLE_WEIGHT,
 )
-from style_bert_vits2.nlp.japanese import pyopenjtalk_worker as pyopenjtalk
 from style_bert_vits2.tts_model import TTSModelHolder
 from pathlib import Path
 import soundfile as sf
 import torch
-
-pyopenjtalk.initialize_worker()
 
 def generate_audio(text: str):
     

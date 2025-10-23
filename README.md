@@ -288,7 +288,7 @@ Next, update the `model_name` and `model_path` variables in either `_inference_o
 <a id="uyod"></a>
 ### Using Your Own Device
 
-1. Clone `TTSDS-ID-JP` repository and install required packages
+1. Clone `TTSDS-ID-JP` repository and install the required packages (we recommend Python version 3.9 for dependencies)
   ```sh
   cd path/to/cloned/ttsds-id-jp/repository
   git clone https://github.com/human-ai-lab/TTSDS-ID-JP.git
